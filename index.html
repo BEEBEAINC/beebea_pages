@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeeBea Assets - GitHub Pages</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        line-height: 1.6;
+        color: #333;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid #f0f0f0;
+      }
+      .logo {
+        max-height: 100px;
+        margin-bottom: 1rem;
+      }
+      .assets-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .asset-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1.5rem;
+        background: #fafafa;
+      }
+      .asset-preview {
+        width: 100%;
+        max-height: 150px;
+        object-fit: contain;
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+      .asset-info h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.1rem;
+      }
+      .asset-url {
+        background: #f5f5f5;
+        padding: 0.5rem;
+        border-radius: 4px;
+        font-family: "Monaco", "Menlo", monospace;
+        font-size: 0.9rem;
+        word-break: break-all;
+        margin: 0.5rem 0;
+      }
+      .copy-btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9rem;
+      }
+      .copy-btn:hover {
+        background: #0056b3;
+      }
+      .usage-info {
+        background: #e8f4fd;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+      }
+      .usage-info h2 {
+        margin-top: 0;
+        color: #0066cc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="images/beebea_logo.svg"
+        alt="BeeBea Logo"
+        class="logo"
+        onerror="this.style.display='none'"
+      />
+      <h1>BeeBea Assets Server</h1>
+      <p>Static assets hosted via GitHub Pages for development use</p>
+    </div>
+
+    <div class="usage-info">
+      <h2>How to Use These Assets</h2>
+      <p>
+        These images are served via GitHub Pages and can be referenced in your
+        development projects using the URLs below. Simply copy the URL and use
+        it in your HTML, CSS, or JavaScript files.
+      </p>
+      <p>
+        <strong>Base URL:</strong>
+        <code>https://[username].github.io/[repository-name]/images/</code>
+      </p>
+    </div>
+
+    <div class="assets-grid">
+      <div class="asset-card">
+        <img
+          src="images/beebea_banner.svg"
+          alt="BeeBea Banner"
+          class="asset-preview"
+        />
+        <div class="asset-info">
+          <h3>BeeBea Banner</h3>
+          <div class="asset-url" id="banner-url">images/beebea_banner.svg</div>
+          <button class="copy-btn" onclick="copyToClipboard('banner-url')">
+            Copy URL
+          </button>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <img
+          src="images/beebea_home_hero.svg"
+          alt="BeeBea Home Hero"
+          class="asset-preview"
+        />
+        <div class="asset-info">
+          <h3>BeeBea Home Hero</h3>
+          <div class="asset-url" id="hero-url">images/beebea_home_hero.svg</div>
+          <button class="copy-btn" onclick="copyToClipboard('hero-url')">
+            Copy URL
+          </button>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <img
+          src="images/beebea_icon.svg"
+          alt="BeeBea Icon"
+          class="asset-preview"
+        />
+        <div class="asset-info">
+          <h3>BeeBea Icon</h3>
+          <div class="asset-url" id="icon-url">images/beebea_icon.svg</div>
+          <button class="copy-btn" onclick="copyToClipboard('icon-url')">
+            Copy URL
+          </button>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <img
+          src="images/beebea_logo.svg"
+          alt="BeeBea Logo"
+          class="asset-preview"
+        />
+        <div class="asset-info">
+          <h3>BeeBea Logo</h3>
+          <div class="asset-url" id="logo-url">images/beebea_logo.svg</div>
+          <button class="copy-btn" onclick="copyToClipboard('logo-url')">
+            Copy URL
+          </button>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <img src="images/favicon.svg" alt="Favicon SVG" class="asset-preview" />
+        <div class="asset-info">
+          <h3>Favicon (SVG)</h3>
+          <div class="asset-url" id="favicon-svg-url">images/favicon.svg</div>
+          <button class="copy-btn" onclick="copyToClipboard('favicon-svg-url')">
+            Copy URL
+          </button>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <div
+          style="
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+          "
+        >
+          <img
+            src="images/favicon.ico"
+            alt="Favicon ICO"
+            style="width: 32px; height: 32px"
+          />
+        </div>
+        <div class="asset-info">
+          <h3>Favicon (ICO)</h3>
+          <div class="asset-url" id="favicon-ico-url">images/favicon.ico</div>
+          <button class="copy-btn" onclick="copyToClipboard('favicon-ico-url')">
+            Copy URL
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function copyToClipboard(elementId) {
+        const element = document.getElementById(elementId);
+        const baseUrl =
+          window.location.origin +
+          window.location.pathname
+            .replace("/index.html", "")
+            .replace(/\/$/, "");
+        const fullUrl = baseUrl + "/" + element.textContent;
+
+        navigator.clipboard.writeText(fullUrl).then(() => {
+          const btn = element.nextElementSibling;
+          const originalText = btn.textContent;
+          btn.textContent = "Copied!";
+          btn.style.background = "#28a745";
+
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = "#007bff";
+          }, 2000);
+        });
+      }
+    </script>
+  </body>
+</html>
